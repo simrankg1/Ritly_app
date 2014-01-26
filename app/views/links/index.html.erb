@@ -1,0 +1,8 @@
+<div>
+	Previous Searches: <% @links.each do |link| %> <br>
+		<div> 
+		Original Link: <%= link[:url] %> <br>
+		Ritley Link: <%= link[:random_string] %>
+		</div>
+		<% end %>
+	</div>
