@@ -42,9 +42,9 @@ class LinksController < ApplicationController
 
 
 
-	 # def preview
-  #          @link = Link.find_by(:random_string => params[:random_string])
-  #    end
+	 def preview
+           @link = Link.find_by(:random_string => params[:random_string])
+     end
 
 
 	# def go

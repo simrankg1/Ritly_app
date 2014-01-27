@@ -1,8 +1,11 @@
-<div>
-	Previous Searches: <% @links.each do |link| %> <br>
-		<div> 
-		Original Link: <%= link[:url] %> <br>
-		Ritley Link: <%= link[:random_string] %>
-		</div>
+	<div class="content-box col-sm-4 col-sm-offset-4">
+		<h1> Previous Searches: <% @links.each do |link| %> </h1>
+		<hr>
+		<p> 
+			Original Link: <%= link[:url] %> <Br>
+			Ritley Link: <%= link[:random_string] %>
+		</p>
+		<br>
 		<% end %>
+		<a class="btn mainbtn" href="/links/new">Create Your own Rit!</a>
 	</div>

@@ -1,9 +1,11 @@
+<h1> Create your own rit! </h1>
+<div class="content-box col-sm-4 col-sm-offset-4">
+	
+	<%= form_for :link, method: :post, url: create_path do |f|%>
+ 	<p> Enter a website address </p> <%= f.text_field :url %> <br> 
+  	<%= f.text_field :random_string, value: @rit %> <br>
 
-<%= form_for :link, method: :post, url: create_path do |f|%>
- <%= f.text_field :url %> <br>
-  <%= f.text_field :random_string, value: @rit %> <br>
 
-
- <%= f.submit "Submit" %>
-
- <% end %>
+ 	<%= f.submit "Submit" %>
+ 	<% end %>
+</div>

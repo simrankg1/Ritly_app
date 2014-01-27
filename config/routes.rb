@@ -4,7 +4,7 @@ Ritlyapp::Application.routes.draw do
   post "/links", to: 'links#create', as: :create
   get "/links/:id", to: 'links#show', as: :show
   get "/links/go/:random_string", to: 'links#go' #this goes to the original link
-  # get "links/go/:random_string/preview", to: "links#preview"
+  get "links/go/:random_string/preview", to: "links#preview"
   
 end
 

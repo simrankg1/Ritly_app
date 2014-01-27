@@ -1,6 +1,11 @@
-<div>
-	<div> Here is your ritley link: localhost:3000/links/<%= @link.random_string %> 
 
+ <div class="content-box col-sm-4 col-sm-offset-4">
+
+	<h1>Voila! Your Link: </h1> 
+	<a class="link" href="/links/go/<%= @link.random_string %>">localhost:3000/links/<%= @link.random_string %></a>
+	<hr>
+	<a class="btn btn-default" href="/links/new"> Create a new rit! </a>
+	<a class="btn btn-default" href="/links"> Review your created rits! </a>
 
 	</div>
-	</div>
+</div> 
