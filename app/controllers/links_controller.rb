@@ -21,7 +21,36 @@ class LinksController < ApplicationController
 	def show
 		id = params[:id] #
 		@link= Link.find(id)
-		redirect_to "https://#{link.url}"
 	end
+
+	def go
+		link = Link.find_by(:random_string => params[:random_string])
+		x = link.url
+		if x.match("http://") != nil
+			redirect_to "#{x}"
+		elsif x.match("www.") != nil
+			redirect_to "http://" + "#{x}"
+		else
+			redirect_to "http://www." + "#{x}"
+		end
+	end
+
+
+
+
+
+
+
+
+	 # def preview
+  #          @link = Link.find_by(:random_string => params[:random_string])
+  #    end
+
+
+	# def go
+	# 	id= params[:url]
+	# 	 link = Link.find_by_url(:url)
+	# 	redirect_to "http://#{link.url}"
+	# end
 
 end

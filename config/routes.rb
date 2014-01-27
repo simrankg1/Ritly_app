@@ -1,20 +1,37 @@
 Ritlyapp::Application.routes.draw do
   get "links", to: 'links#index'
-  get "links/new", to: 'links#new'
-  post "links", to: 'links#create', as: :create
-  get "links/:id", to: 'links#show', as: :show
-  
-
-
-
-
-
-
-
-
-
+  get "/links/new", to: 'links#new'
+  post "/links", to: 'links#create', as: :create
+  get "/links/:id", to: 'links#show', as: :show
+  get "/links/go/:random_string", to: 'links#go' #this goes to the original link
+  # get "links/go/:random_string/preview", to: "links#preview"
   
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # The priority is based upon order of creation: first created -> highest priority.
